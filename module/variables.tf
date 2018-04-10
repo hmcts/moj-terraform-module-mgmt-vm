@@ -50,3 +50,4 @@ variable "delete_data_disks_on_termination" {
 }
 
 variable "port" {}
+variable "admin_username" {}

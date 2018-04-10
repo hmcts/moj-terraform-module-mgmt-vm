@@ -21,3 +21,8 @@ variable "role" {
 variable "ssh_key" {
   default = "sandbox"
 }
+
+variable "admin_username" {
+}
+variable "port" {
+}
