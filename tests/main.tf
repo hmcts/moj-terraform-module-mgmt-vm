@@ -10,4 +10,5 @@ module "module-vm" {
   product                     = "${var.env}"
   env                         = "${var.env}"
   role                        = "${var.role}"
+  nsg_id                      = ""
 }

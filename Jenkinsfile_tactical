@@ -89,6 +89,7 @@ node {
                     }
                 }
             }
+        }
 
                 stage(name: 'TF Apply') {
                     if (planExitCode == 2) {
