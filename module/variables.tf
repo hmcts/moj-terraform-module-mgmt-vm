@@ -51,6 +51,6 @@ variable "delete_data_disks_on_termination" {
 
 variable "port" {}
 variable "admin_username" {}
-variable "network_security_group_id" {
+variable "nsg_ids" {
   default = "" 
 }
