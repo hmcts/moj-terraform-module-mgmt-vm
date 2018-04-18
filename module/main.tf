@@ -21,11 +21,14 @@ resource "azurerm_network_interface" "reform-nonprod" {
   name                = "${var.vm_name}-NIC"
   location            = "${var.location}"
   resource_group_name = "${var.resource_group}"
+  network_security_group_id        = "${var.nsg_ids}"
+
 
   ip_configuration {
     name                          = "${var.vm_name}-NIC"
     subnet_id                     = "${var.subnet_id}"
     private_ip_address_allocation = "dynamic"
+
   }
 }
 
@@ -39,7 +42,6 @@ resource "azurerm_virtual_machine" "reform-nonprod" {
   availability_set_id              = "${var.avset_id}"
   delete_os_disk_on_termination    = "${var.delete_os_disk_on_termination}"
   delete_data_disks_on_termination = "${var.delete_data_disks_on_termination}"
-  network_security_group_id        = "${var.nsg_ids}"
 
   storage_image_reference {
     publisher = "OpenLogic"
