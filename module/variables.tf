@@ -54,3 +54,8 @@ variable "admin_username" {}
 variable "nsg_ids" {
   default = "" 
 }
+
+variable "azure_subscription_id" {}
+variable "subnet" {}
+variable "vnet" {}
+variable "resource_group_name" {}

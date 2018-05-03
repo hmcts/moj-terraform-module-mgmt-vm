@@ -26,7 +26,7 @@ resource "azurerm_network_interface" "reform-nonprod" {
 
   ip_configuration {
     name                          = "${var.vm_name}-NIC"
-    subnet_id                     = "${var.subnet_id}"
+    subnet_id                     = "/subscriptions/${var.azure_subscription_id}/resourceGroups/${var.resource_group_name}/providers/Microsoft.Network/virtualNetworks/${var.vnet}/subnets/${var.subnet}"
     private_ip_address_allocation = "dynamic"
 
   }
