@@ -10,7 +10,6 @@ variable "location" {
   default = "UK South"
 }
 
-variable "subnet_id" {}
 variable "avset_id" {}
 variable "ssh_key" {}
 variable "storage_account" {}
