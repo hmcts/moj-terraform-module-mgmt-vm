@@ -13,6 +13,9 @@ data "template_file" "server_name" {
 resource "random_string" "password" {
   length  = 30
   special = true
+      lifecycle {
+    ignore_changes = ["*"]
+  }
 }
 
 # Create Networking
